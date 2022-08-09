@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import theme from 'styles/theme';
-// import { FONT_FAMILY } from 'src/styles'
 
 export const SquareTagWrapper = styled.button`
     height: 30px;

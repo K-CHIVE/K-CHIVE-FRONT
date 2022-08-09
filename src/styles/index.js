@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-export const FONT_FAMILY = "'Poppins'. sans-serif";
+export const FONT_FAMILY = "'Poppins', 'Noto Sans KR', sans-serif";
 
 export const GlobalStyles = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
