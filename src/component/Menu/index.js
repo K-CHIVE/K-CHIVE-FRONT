@@ -3,18 +3,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import "./styles.css";
 import { Link } from "react-router-dom";
-// const artist = [
-//   "더보이즈",
-//   "블랙핑크",
-//   "세븐틴",
-//   "소녀시대",
-//   "아이브",
-//   "에이티즈",
-//   "트와이스",
-// ];
+import Modal from "component/Modal";
+
+const artist = [
+  "더보이즈",
+  "블랙핑크",
+  "세븐틴",
+  "소녀시대",
+  "아이브",
+  "에이티즈",
+  "트와이스",
+];
 const index = ({ menu }) => {
   const [isOpen, setMenu] = useState(false);
   const toggleMenu = () => {
+    console.log("bbb");
     setMenu(!isOpen);
   };
   return (
@@ -31,6 +34,11 @@ const index = ({ menu }) => {
             className="angleDown"
             onClick={toggleMenu}
           />
+          <Modal open={isOpen} className="customOverlay">
+            {artist.map((v) => {
+              return <div key={v}>{v}</div>;
+            })}
+          </Modal>
         </div>
         <div className="menu ">
           <Link

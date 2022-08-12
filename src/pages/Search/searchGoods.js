@@ -19,7 +19,7 @@ const searchGoods = () => {
           <SquareTag text="팬 굿즈" />
         </div>
         <div className="search-content-input">
-          <input type="text" placeholder="검색어를 입력하세요" />
+          <input type="text" placeholder="검색어를 입력하세요 ..." />
         </div>
       </div>
     </>

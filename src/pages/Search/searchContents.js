@@ -1,5 +1,7 @@
 import React from "react";
 import { SquareTag } from "../../component/Tag/SquareTag";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import Logo from "../../component/Logo";
 import "./search.css";
 import Menu from "../../component/Menu";
@@ -19,7 +21,7 @@ const searchContents = () => {
           <SquareTag text="팬 트윗" />
         </div>
         <div className="search-content-input">
-          <input type="text" placeholder="검색어를 입력하세요" />
+          <input type="text" placeholder="검색어를 입력하세요 ..." />
         </div>
       </div>
     </>
