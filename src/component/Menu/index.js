@@ -35,9 +35,15 @@ const index = ({ menu }) => {
             onClick={toggleMenu}
           />
           <Modal open={isOpen} className="customOverlay">
-            {artist.map((v) => {
-              return <div key={v}>{v}</div>;
-            })}
+            <div className="modal_list">
+              <div className="modal_name">그룹 선택</div>
+              <ul className="circleType">
+                {artist.map((v) => {
+                  return <li key={v}>{v}</li>;
+                })}
+              </ul>
+              <div className="modal_btn">선택하기</div>
+            </div>
           </Modal>
         </div>
         <div className="menu ">
