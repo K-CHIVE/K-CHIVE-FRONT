@@ -20,6 +20,7 @@ const index = ({ menu }) => {
     console.log("bbb");
     setMenu(!isOpen);
   };
+
   return (
     <>
       <header>
@@ -37,11 +38,16 @@ const index = ({ menu }) => {
           <Modal open={isOpen} className="customOverlay">
             <div className="modal_list">
               <div className="modal_name">그룹 선택</div>
-              <ul className="circleType">
+              <div className="circleType">
                 {artist.map((v) => {
-                  return <li key={v}>{v}</li>;
+                  return (
+                    <div key={v} className="modal_list_item">
+                      <input type={"radio"} key={v} id={v} name="radio" />
+                      <label htmlFor={v}>{v}</label>
+                    </div>
+                  );
                 })}
-              </ul>
+              </div>
               <div className="modal_btn">선택하기</div>
             </div>
           </Modal>

@@ -18,9 +18,11 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  margin: 2% 0% 2% 5%;
+  padding: 2% 0% 2% 5%;
+  box-sizing: border-box;
   font-weight: 400;
   height: 60%;
+  width: 100%;
 }
 
 .modal_list {
@@ -34,7 +36,6 @@
 }
 
 .modal_name {
-  padding-left: 25px;
   font-weight: 800;
   height: 10%;
   display: flex;
@@ -54,4 +55,9 @@
   font-weight: 600;
   border-radius: 5px;
   margin: 2% 0% 2% 60%;
+}
+
+.modal_list_item {
+  display: flex;
+  width: 100%;
 }
