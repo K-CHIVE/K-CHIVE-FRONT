@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { SquareTag } from "../../component/Tag/SquareTag";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import Logo from "../../component/Logo";
+import { LogoBlack } from "../../component/Logo";
 import "./search.css";
 import Menu from "../../component/Menu";
 import Modal from "component/Modal";
@@ -139,7 +139,7 @@ const searchContents = () => {
           </div>
         </Modal>
         <div className="search-content-title">
-          <Logo width="50%" height="50px" style={{ Color: "black" }} />
+          <LogoBlack style={{ Color: "black" }} />
         </div>
         <div className="search-content-button">
           <SquareTag text="ALL" />

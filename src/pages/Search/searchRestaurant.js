@@ -1,6 +1,6 @@
 import React from "react";
 import { SquareTag } from "../../component/Tag/SquareTag";
-import Logo from "../../component/Logo";
+import { LogoBlack } from "../../component/Logo";
 import "./search.css";
 import Menu from "../../component/Menu";
 const searchRestaurant = () => {
@@ -9,7 +9,7 @@ const searchRestaurant = () => {
       <Menu menu={"restaurant"} />
       <div className="search-content">
         <div className="search-content-title">
-          <Logo width="50%" height="50px" style={{ Color: "black" }} />
+          <LogoBlack style={{ Color: "black" }} />
         </div>
         <div className="search-content-button">
           <SquareTag text="ALL" />

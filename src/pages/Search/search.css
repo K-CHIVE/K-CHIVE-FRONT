@@ -1,8 +1,9 @@
 .search-content-input input {
-  border-radius: 20px;
   width: 90%;
-  height: 70%;
+  height: 100%;
+  border-radius: 20px;
   padding: 5px 10px;
+  border: 1px solid #1D1D1D;
 }
 .search-content {
   width: 100%;

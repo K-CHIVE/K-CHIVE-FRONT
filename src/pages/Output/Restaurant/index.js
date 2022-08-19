@@ -1,15 +1,15 @@
 import React from 'react';
 
-import Post from './Post';
+import Post from '../Post';
 import RoundTagFilter from 'component/Tag/RoundTagFilter';
 
 import {
-    OutputWrapper, FilterBar
+    RestaurantWrapper, FilterBar
 } from './styles';
 
-const Output = () => {
+const Restaurant = () => {
     return <>
-        <OutputWrapper>
+        <RestaurantWrapper>
             <FilterBar>
                 <RoundTagFilter text="멤버"></RoundTagFilter>
                 <RoundTagFilter text="검색어"></RoundTagFilter>
@@ -27,11 +27,11 @@ const Output = () => {
                     heart={el.heart}
                 />
             ))}
-        </OutputWrapper>
+        </RestaurantWrapper>
     </>
 };
 
-export default Output;
+export default Restaurant;
 
 const data = [
     {   

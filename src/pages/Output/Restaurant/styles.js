@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 // import { FONT_FAMILY } from 'src/styles'
 
-export const OutputWrapper = styled.div`
+export const RestaurantWrapper = styled.div`
     position: relative;
 `;
 
