@@ -2,7 +2,7 @@ import React from "react";
 import { SquareTag } from "../../component/Tag/SquareTag";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import Logo from "../../component/Logo";
+import { LogoBlack } from "../../component/Logo";
 import "./search.css";
 import Menu from "../../component/Menu";
 const searchContents = () => {
@@ -11,7 +11,7 @@ const searchContents = () => {
       <Menu menu={"contents"} />
       <div className="search-content">
         <div className="search-content-title">
-          <Logo width="50%" height="50px" style={{ Color: "black" }} />
+          <LogoBlack style={{ Color: "black" }} />
         </div>
         <div className="search-content-button">
           <SquareTag text="ALL" />
