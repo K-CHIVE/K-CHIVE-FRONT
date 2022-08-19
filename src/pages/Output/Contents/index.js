@@ -43,6 +43,9 @@ export const ImgContents = () => {
         setThree(true);
         window.location.href="/image-search/fantweets";
     }
+    const InitTotalMember = () => {
+        setMemberName("그룹 선택");
+      };
 
     useEffect(() => {
         setMember(theboysMember);
@@ -73,7 +76,7 @@ export const ImgContents = () => {
                     })}
                     </div>
                     <div className="InitApplyBtn">
-                    <InitButton text="초기화" />
+                    <InitButton onClick={InitTotalMember} text="초기화" />
                     <ApplyButton onClick={toggleMember} text="적용하기" />
                     </div>
                 </div>
