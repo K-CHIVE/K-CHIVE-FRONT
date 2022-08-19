@@ -70,9 +70,15 @@ const searchContents = () => {
   const [searchName, setSearchName] = useState("검색어");
   const selectSearchName = (e) => {
     setSearchName(e.target.innerText);
-    console.log(searchName);
   };
 
+  const InitTotalSearch = () => {
+    setSearchName("검색어");
+  };
+
+  const InitTotalMember = () => {
+    setMemberName("그룹 선택");
+  };
   return (
     <>
       <Menu menu={"contents"} />
@@ -101,7 +107,7 @@ const searchContents = () => {
               })}
             </div>
             <div className="InitApplyBtn">
-              <InitButton text="초기화" />
+              <InitButton onClick={InitTotalMember} text="초기화" />
               <ApplyButton onClick={toggleMember} text="적용하기" />
             </div>
           </div>
@@ -137,7 +143,7 @@ const searchContents = () => {
               })}
             </div>
             <div className="InitApplyBtn">
-              <InitButton text="초기화" />
+              <InitButton onClick={InitTotalSearch} text="초기화" />
               <ApplyButton onClick={toggleSearch} text="적용하기" />
             </div>
           </div>
