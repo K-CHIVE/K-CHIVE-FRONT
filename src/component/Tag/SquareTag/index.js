@@ -8,7 +8,7 @@ import {
 
 export const SquareTag = (props) => {
     return <>
-        <SquareTagWrapper primary={props.color} >
+        <SquareTagWrapper primary={props.color} {...props}>
             {props.text}
         </SquareTagWrapper>
     </>
@@ -21,7 +21,7 @@ SquareTag.propTypes = {
 
 export const SquareTagBlack = (props) => {
     return <>
-        <SquareTagBlackWrapper primary={props.color} >
+        <SquareTagBlackWrapper primary={props.color} {...props}>
             {props.text}
         </SquareTagBlackWrapper>
     </>

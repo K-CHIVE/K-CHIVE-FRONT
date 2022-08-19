@@ -8,7 +8,7 @@ import {
 
 const RoundTagFilter = (props) => {
     return (
-        <RoundTagFilterWrapper>
+        <RoundTagFilterWrapper {...props}>
             {props.text}
             <ArrowDownIcon />
         </RoundTagFilterWrapper>

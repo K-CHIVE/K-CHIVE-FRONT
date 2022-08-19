@@ -8,7 +8,7 @@ import {
 
 export const RoundTag = (props) => {
     return (
-        <RoundTagWrapper>
+        <RoundTagWrapper {...props}>
             {props.text}
         </RoundTagWrapper>
     )
@@ -20,7 +20,7 @@ RoundTag.propTypes = {
 
 export const RoundTagBig = (props) => {
     return (
-        <RoundTagBigWrapper primary={props.color} >
+        <RoundTagBigWrapper primary={props.color} {...props}>
             {props.text}
         </RoundTagBigWrapper>
     )

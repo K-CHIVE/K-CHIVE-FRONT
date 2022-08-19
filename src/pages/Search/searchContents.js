@@ -79,6 +79,12 @@ const searchContents = () => {
   const InitTotalMember = () => {
     setMemberName("그룹 선택");
   };
+  const enterkey = () => {
+    if (window.event.keyCode == 13) {
+        window.location.href="/image-search/contents";
+      }
+  }
+
   return (
     <>
       <Menu menu={"contents"} />
@@ -159,7 +165,7 @@ const searchContents = () => {
           <SquareTag text="팬 트윗" />
         </div>
         <div className="search-content-input">
-          <input type="text" placeholder="검색어를 입력하세요 ..." />
+          <input type="text" onKeyUp={enterkey} placeholder="검색어를 입력하세요 ..." />
         </div>
       </div>
     </>
