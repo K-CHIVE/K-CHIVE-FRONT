@@ -17,11 +17,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
-  padding: 2% 0% 2% 5%;
+  padding: 2% 5% 2% 5%;
   box-sizing: border-box;
   font-weight: 400;
-  height: 60%;
+  height: 70%;
   width: 100%;
 }
 
@@ -33,6 +32,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 2% 2% 0 2%;
+  box-sizing: border-box;
 }
 
 .modal_name {
@@ -40,7 +41,8 @@
   height: 10%;
   display: flex;
   align-items: center;
-  margin: 2% 0% 0% 5%;
+  margin: 2% 0% 2% 5%;
+  font-size: 120%;
 }
 
 .modal_btn {
@@ -60,4 +62,38 @@
 .modal_list_item {
   display: flex;
   width: 100%;
+  padding: 2% 0;
+}
+
+.modal_list_item label {
+  padding-left: 5%;
+}
+
+.bottomModal {
+  justify-content: end;
+}
+
+.bottomModal .modal_list {
+  width: 100%;
+  height: 35%;
+}
+
+.fixedcircleType {
+  height: 60%;
+  overflow: auto;
+}
+
+.selectSearchMenu {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.checkIcon {
+  color: #394cf5;
+}
+
+.select_button {
+  display: flex;
+  margin: 5% 0;
 }

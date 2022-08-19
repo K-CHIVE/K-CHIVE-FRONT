@@ -23,13 +23,12 @@
   height: 100vh;
 }
 
-/* .search-content-button {
-  display: flex;
-  border: 1px solid black;
-  width: 90%;
-  height: 20px;
-} */
-
 .search-content-button {
   margin: 20px 0px;
+}
+
+.InitApplyBtn {
+  display: flex;
+  height: 10%;
+  margin: 2% 0;
 }
