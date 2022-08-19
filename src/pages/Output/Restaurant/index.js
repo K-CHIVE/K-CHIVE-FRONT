@@ -73,9 +73,10 @@ const Restaurant = () => {
     setMemberOpen(!MemberOpen);
     axios
       .get("http://52.79.132.135:8000/food-search", {
-        params: { group: "더보이즈", member: memberName },
+        params: { group: "더보이즈", member: "주학년" },
       })
       .then((response) => {
+        setData(data);
         console.log(response.data);
       });
   };
@@ -176,13 +177,13 @@ const Restaurant = () => {
         {data.map((el) => (
           <Post
             key={el.id}
-            nickName={el.nickName ? el.nickName : null}
-            userId={el.userId ? el.userId : null}
-            date={el.date ? el.date : null}
-            content={el.content ? el.content : null}
-            reply={el.reply ? el.reply : null}
-            retweet={el.retweet ? el.retweet : null}
-            heart={el.heart ? el.heart : null}
+            nickName={el.user_name ? el.user_name : null}
+            userId={el.user_screen_name ? el.user_screen_name : null}
+            date={el.created_at ? el.created_at : null}
+            content={el.full_text ? el.full_text : null}
+            reply={0}
+            retweet={el.retweet_count ? el.retweet_count : null}
+            heart={el.favorite_count ? el.favorite_count : null}
           />
         ))}
       </RestaurantWrapper>
