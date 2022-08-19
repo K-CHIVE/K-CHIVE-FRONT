@@ -3,6 +3,7 @@ import { SquareTag } from "../../component/Tag/SquareTag";
 import Logo from "../../component/Logo";
 import "./search.css";
 import Menu from "../../component/Menu";
+
 const searchGoods = () => {
   return (
     <>

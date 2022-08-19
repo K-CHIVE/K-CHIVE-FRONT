@@ -1,14 +1,16 @@
 import React from "react";
 import "./Button.css";
-const Button = () => {
+import { InitButtonWrapper, ApplyButtonWrapper } from "./styles";
+export const InitButton = (props) => {
   return (
-    <>
-      <div className="select_button">
-        <button className="styleBtn initBtn">초기화</button>
-        <button className="styleBtn applyBtn">적용하기</button>
-      </div>
-    </>
+    <InitButtonWrapper onClick={props.onClick}>{props.text}</InitButtonWrapper>
   );
 };
 
-export default Button;
+export const ApplyButton = (props) => {
+  return (
+    <ApplyButtonWrapper onClick={props.onClick}>
+      {props.text}
+    </ApplyButtonWrapper>
+  );
+};

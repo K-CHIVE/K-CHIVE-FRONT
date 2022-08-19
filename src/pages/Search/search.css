@@ -1,11 +1,7 @@
-.search-content-input {
-  width: 90%;
-  height: 20%;
-}
 .search-content-input input {
-  width: 100%;
   border-radius: 20px;
-  height: 30px;
+  width: 90%;
+  height: 70%;
   padding: 5px 10px;
 }
 .search-content {
@@ -14,9 +10,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 20px;
+  padding: 0 20px;
   box-sizing: border-box;
-  margin: 0% 2.5%;
 }
 
 .search-content-title {
@@ -27,13 +22,12 @@
   height: 100vh;
 }
 
-/* .search-content-button {
-  display: flex;
-  border: 1px solid black;
-  width: 90%;
-  height: 20px;
-} */
-
 .search-content-button {
   margin: 20px 0px;
+}
+
+.InitApplyBtn {
+  display: flex;
+  height: 10%;
+  margin: 2% 0;
 }

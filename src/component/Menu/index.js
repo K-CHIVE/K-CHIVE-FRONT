@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import "./styles.css";
@@ -6,19 +6,54 @@ import { Link } from "react-router-dom";
 import Modal from "component/Modal";
 
 const artist = [
-  "더보이즈",
-  "블랙핑크",
-  "세븐틴",
-  "소녀시대",
-  "아이브",
-  "에이티즈",
-  "트와이스",
+  {
+    idx: 0,
+    name: "에이티즈",
+  },
+  {
+    idx: 1,
+    name: "더보이즈",
+  },
+  {
+    idx: 2,
+    name: "블랙핑크",
+  },
+  {
+    idx: 3,
+    name: "세븐틴",
+  },
+  {
+    idx: 4,
+    name: "소녀시대",
+  },
+  {
+    idx: 5,
+    name: "아이브",
+  },
+  {
+    idx: 6,
+    name: "트와이스",
+  },
 ];
 const index = ({ menu }) => {
+  const [Artist, setArtist] = useState(artist);
+  useEffect(() => {
+    fetch("http://127.0.0.1:8000/common/group", { method: "GET" })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setArtist(artist);
+      });
+  }, []);
+
   const [isOpen, setMenu] = useState(false);
   const toggleMenu = () => {
-    console.log("bbb");
     setMenu(!isOpen);
+  };
+
+  const [artistName, setArtistName] = useState("그룹 선택");
+  const selectArtist = (e) => {
+    setArtistName(e.target.value);
   };
 
   return (
@@ -29,7 +64,7 @@ const index = ({ menu }) => {
             isOpen ? "artist-select show-menu" : "artist-select hide-menu"
           }
         >
-          <div className="artist-select-name">더보이즈</div>
+          <div className="artist-select-name">{artistName}</div>
           <FontAwesomeIcon
             icon={faAngleDown}
             className="angleDown"
@@ -39,16 +74,26 @@ const index = ({ menu }) => {
             <div className="modal_list">
               <div className="modal_name">그룹 선택</div>
               <div className="circleType">
-                {artist.map((v) => {
+                {Artist.map((v) => {
                   return (
-                    <div key={v} className="modal_list_item">
-                      <input type={"radio"} key={v} id={v} name="radio" />
-                      <label htmlFor={v}>{v}</label>
+                    <div key={v.name} className="modal_list_item">
+                      <input
+                        type={"radio"}
+                        key={v.name}
+                        id={v.name}
+                        name="radio"
+                        value={v.name}
+                        onChange={selectArtist}
+                        checked={v.name == artistName ? true : false}
+                      />
+                      <label htmlFor={v.name}>{v.name}</label>
                     </div>
                   );
                 })}
               </div>
-              <div className="modal_btn">선택하기</div>
+              <div className="modal_btn" onClick={toggleMenu}>
+                선택하기
+              </div>
             </div>
           </Modal>
         </div>
