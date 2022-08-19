@@ -45,17 +45,17 @@ const index = ({ menu }) => {
         setArtist(artist);
       });
   }, []);
-  // console.log(Artist);
 
   const [isOpen, setMenu] = useState(false);
   const toggleMenu = () => {
     setMenu(!isOpen);
   };
 
-  const [artistName, setArtistName] = useState("더보이즈");
+  const [artistName, setArtistName] = useState("그룹 선택");
   const selectArtist = (e) => {
     setArtistName(e.target.value);
   };
+
   return (
     <>
       <header>

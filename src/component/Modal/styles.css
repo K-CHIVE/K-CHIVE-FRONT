@@ -92,3 +92,8 @@
 .checkIcon {
   color: #394cf5;
 }
+
+.select_button {
+  display: flex;
+  margin: 5% 0;
+}

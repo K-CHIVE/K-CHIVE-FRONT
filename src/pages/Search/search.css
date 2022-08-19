@@ -1,11 +1,7 @@
-.search-content-input {
-  width: 90%;
-  height: 20%;
-}
 .search-content-input input {
-  width: 100%;
   border-radius: 20px;
-  height: 30px;
+  width: 90%;
+  height: 70%;
   padding: 5px 10px;
 }
 .search-content {
@@ -28,4 +24,10 @@
 
 .search-content-button {
   margin: 20px 0px;
+}
+
+.InitApplyBtn {
+  display: flex;
+  height: 10%;
+  margin: 2% 0;
 }
