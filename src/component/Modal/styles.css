@@ -87,12 +87,24 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
 }
 
-.checkIcon {
+.searchName {
+  margin: 4% 0;
+}
+
+.searchNameChecked {
   color: #394cf5;
 }
 
+.checkIcon {
+  color: rgb(215, 215, 215);
+}
+
+.checkIconChecked {
+  color: #394cf5;
+}
 .select_button {
   display: flex;
   margin: 5% 0;
