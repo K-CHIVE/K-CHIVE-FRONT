@@ -2,6 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://52.79.132.135:8000",
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.1.2",
     "@fortawesome/free-regular-svg-icons": "^6.1.2",
@@ -10,6 +11,8 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.27.2",
+    "http-proxy-middleware": "^2.0.6",
     "prop-types": "^15.8.1",
     "query-string": "^7.1.1",
     "react": "^18.2.0",
