@@ -14,9 +14,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 20px;
+  padding: 0 20px;
   box-sizing: border-box;
-  margin: 0% 2.5%;
 }
 
 .search-content-title {
@@ -27,13 +26,10 @@
   height: 100vh;
 }
 
-/* .search-content-button {
-  display: flex;
-  border: 1px solid black;
-  width: 90%;
-  height: 20px;
-} */
-
 .search-content-button {
   margin: 20px 0px;
+}
+
+.checkIcon {
+  color: #394cf5;
 }

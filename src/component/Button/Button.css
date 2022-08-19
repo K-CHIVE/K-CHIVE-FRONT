@@ -1,9 +1,10 @@
 .select_button {
   display: flex;
+  margin: 5% 0;
 }
 
 .styleBtn {
-  margin: 0px 15px;
+  margin: 0 15px;
   font-size: 20px;
   background-color: white;
   color: #394cf5;
