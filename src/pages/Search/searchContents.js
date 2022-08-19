@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { SquareTag } from "../../component/Tag/SquareTag";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
@@ -50,7 +50,7 @@ const searchContents = () => {
     setMember(tmpMember);
   }, []);
 
-  const searchMenu = ["전체검색", "해시태그만 보기", "해시태그 제외 보기"];
+  var searchMenu = ["전체검색", "해시태그만 보기", "해시태그 제외 보기"];
 
   const [memberName, setMemberName] = useState("멤버");
   const selectMember = (e) => {
@@ -68,10 +68,8 @@ const searchContents = () => {
   };
 
   const [searchName, setSearchName] = useState("검색어");
-  const textRef = useRef(null);
-  const selectSearchName = () => {
-    setSearchName(textRef.current.innerText);
-    console.log(textRef.current.innerText);
+  const selectSearchName = (e) => {
+    setSearchName(e.target.innerText);
   };
 
   return (
@@ -117,9 +115,9 @@ const searchContents = () => {
                 return (
                   <div key={v} id={v} className="selectSearchMenu">
                     <div
-                      className="searchName"
                       onClick={selectSearchName}
-                      ref={textRef}
+                      checked={searchName == v ? true : false}
+                      className="searchName"
                     >
                       {v}
                     </div>
@@ -139,7 +137,7 @@ const searchContents = () => {
           </div>
         </Modal>
         <div className="search-content-title">
-          <LogoBlack style={{ Color: "black" }} />
+          <LogoBlack width="50%" height="50px" style={{ Color: "black" }} />
         </div>
         <div className="search-content-button">
           <SquareTag text="ALL" />
