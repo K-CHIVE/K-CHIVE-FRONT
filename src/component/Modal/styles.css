@@ -1,0 +1,63 @@
+.customOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.circleType {
+  list-style-type: circle;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 2% 0% 2% 5%;
+  box-sizing: border-box;
+  font-weight: 400;
+  height: 60%;
+  width: 100%;
+}
+
+.modal_list {
+  background-color: white;
+  width: 70%;
+  height: 40%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal_name {
+  font-weight: 800;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  margin: 2% 0% 0% 5%;
+}
+
+.modal_btn {
+  background-color: #394cf5;
+  color: white;
+  width: 30%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 80%;
+  font-weight: 600;
+  border-radius: 5px;
+  margin: 2% 0% 2% 60%;
+}
+
+.modal_list_item {
+  display: flex;
+  width: 100%;
+}
