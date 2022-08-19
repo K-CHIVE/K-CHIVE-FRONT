@@ -70,6 +70,7 @@ const searchContents = () => {
   const [searchName, setSearchName] = useState("검색어");
   const selectSearchName = (e) => {
     setSearchName(e.target.innerText);
+    console.log(searchName);
   };
 
   return (
@@ -116,14 +117,19 @@ const searchContents = () => {
                   <div key={v} id={v} className="selectSearchMenu">
                     <div
                       onClick={selectSearchName}
-                      checked={searchName == v ? true : false}
-                      className="searchName"
+                      className={
+                        searchName == v
+                          ? "searchName searchNameChecked"
+                          : "searchName"
+                      }
                     >
                       {v}
                     </div>
+
                     <FontAwesomeIcon
-                      checked={() => {}}
-                      className="checkIcon"
+                      className={
+                        searchName == v ? "checkIconChecked" : "checkIcon"
+                      }
                       icon={faCheck}
                     />
                   </div>
