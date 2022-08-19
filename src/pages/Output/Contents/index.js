@@ -1,15 +1,29 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Post from '../Post';
 import RoundTagFilter from 'component/Tag/RoundTagFilter';
 import MenuOutput from "../../../component/MenuOutput";
+import Modal from "component/Modal";
+import { InitButton, ApplyButton } from "component/Button";
 
 import * as C from './styles';
 
 export const ImgContents = () => {
+    const [member, setMember] = useState([]);
+    const [memberName, setMemberName] = useState("멤버");
+    const [memberOpen, setMemberOpen] = useState(false);
     const [one, setOne] = useState(true);
     const [two, setTwo] = useState(false);
     const [three, setThree] = useState(false);
+    console.log(memberOpen);
+    
+    const selectMember = (e) => {
+      setMemberName(e.target.value);
+    };
+    const toggleMember = () => {
+      setMemberOpen(!memberOpen);
+      console.log(memberOpen);
+    };
 
     const handleOne = () => {
         setOne(true);
@@ -30,9 +44,40 @@ export const ImgContents = () => {
         window.location.href="/image-search/fantweets";
     }
 
+    useEffect(() => {
+        setMember(theboysMember);
+      }, []);
+
     return <>
         <C.ContentsWrapper>
             <MenuOutput menu={"contents"} />
+            <Modal open={memberOpen} className="customOverlay bottomModal">
+                <div className="modal_list">
+                    <div className="modal_name">멤버</div>
+                    <div className="circleType fixedcircleType">
+                    {member.map((v) => {
+                        return (
+                        <div key={v.name} className="modal_list_item">
+                            <input
+                            type={"radio"}
+                            key={v.name}
+                            id={v.name}
+                            name="radio"
+                            value={v.name}
+                            onChange={selectMember}
+                            checked={v.name == memberName ? true : false}
+                            />
+                            <label htmlFor={v.name}>{v.name}</label>
+                        </div>
+                        );
+                    })}
+                    </div>
+                    <div className="InitApplyBtn">
+                    <InitButton text="초기화" />
+                    <ApplyButton onClick={toggleMember} text="적용하기" />
+                    </div>
+                </div>
+            </Modal>
             <C.Feed>
                 <C.MenuBarWrapper>
                     <C.TypeWrapper>
@@ -54,7 +99,7 @@ export const ImgContents = () => {
                     </C.TypeWrapper>
                 </C.MenuBarWrapper>
                 <C.FilterBar>
-                    <RoundTagFilter text="멤버"></RoundTagFilter>
+                    <RoundTagFilter onClick={toggleMember} text="멤버"></RoundTagFilter>
                     <RoundTagFilter text="검색어"></RoundTagFilter>
                     <RoundTagFilter text="날짜"></RoundTagFilter>
                 </C.FilterBar>
@@ -276,3 +321,50 @@ const data = [
     },
 
 ]
+
+const theboysMember = [
+    {
+      idx: 1,
+      name: "상연",
+    },
+    {
+      idx: 2,
+      name: "제이콥",
+    },
+    {
+      idx: 3,
+      name: "영훈",
+    },
+    {
+      idx: 4,
+      name: "현재",
+    },
+    {
+      idx: 5,
+      name: "주연",
+    },
+    {
+      idx: 6,
+      name: "케빈",
+    },
+    {
+      idx: 7,
+      name: "뉴",
+    },
+    {
+      idx: 8,
+      name: "큐",
+    },
+    {
+      idx: 9,
+      name: "주학년",
+    },
+    {
+      idx: 10,
+      name: "선우",
+    },
+    {
+      idx: 11,
+      name: "에릭",
+    }
+  ];
